@@ -9,8 +9,73 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Floating Icons Animation */
+        .float-icon {
+            position: absolute;
+            opacity: 0.15;
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        /* A: Animated Gradient Background */
+    body {
+        background: linear-gradient(135deg, #1B1464, #4BCFFA, #FF6B00);
+        background-size: 400% 400%;
+        animation: gradientShift 12s ease infinite;
+    }
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* B: Advanced Floating Icons */
+    .float-icon {
+        position: absolute;
+        opacity: 0.12;
+        animation: float 6s ease-in-out infinite, drift 18s linear infinite;
+        pointer-events: none;
+        z-index: 0;
+    }
+    @keyframes drift {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(60px); }
+    }
+
+    /* C: Interactive Card Animations */
+    .service-card {
+        transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .service-card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    }
+
+    /* D: Page Transitions */
+    .fade-page {
+        opacity: 0;
+        animation: fadeIn .8s forwards;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* E: Placeholder for 21 Floating Icons */
+    /* Add icons like: <img src="assets/service-network.png" class="float-icon" style="top:20%; left:15%; width:50px;"> */
+
+</style>
 </head>
 <body>
+    <!-- Floating Icons -->
+    <img src="assets/icon1.png" class="float-icon" style="top:10%; left:5%; width:60px; animation-delay:0s;">
+    <img src="assets/icon2.png" class="float-icon" style="top:40%; right:10%; width:50px; animation-delay:1s;">
+    <img src="assets/icon3.png" class="float-icon" style="bottom:15%; left:30%; width:70px; animation-delay:2s;">
+    <img src="assets/icon4.png" class="float-icon" style="bottom:25%; right:25%; width:55px; animation-delay:3s;">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" role="banner">
     <div class="container nav-row">

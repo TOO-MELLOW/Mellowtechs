@@ -1,68 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Mellow Tech Services</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Mellow Tech Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="animated-bg"></div>
-
-  <header class="header">
+  <nav class="navbar">
     <div class="logo">Mellow Tech</div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html" class="active">About</a>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>About Us</h1>
+    <p>Innovative, reliable, and locally grown tech solutions.</p>
   </header>
 
-  <section class="hero small-hero">
-    <h1 class="hero-title">Who We Are</h1>
-    <p class="hero-sub">Digitally Mellow. Technically Sharp.</p>
-  </section>
-
-  <section class="about-section">
-    <div class="about-card">
-      <h2>Our Story</h2>
-      <p>
-        Mellow Tech Services is a modern digital solutions company that builds websites,
-        systems, apps, and creative digital products. We focus on clean design,
-        next-level animations, and user-friendly interfaces that help businesses grow.
-      </p>
+  <section class="about-content">
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>To provide modern, creative, and accessible tech services for businesses and individuals alike, making your digital life easier and smarter.</p>
     </div>
-
-    <div class="about-card">
-      <h2>What Drives Us</h2>
-      <p>
-        We mix creativity and technology to produce work that feels alive.
-        Every project we build must be smart, unique, and impactful.
-      </p>
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p>To be South Africa's most trusted local tech solutions provider, blending creativity with technical excellence.</p>
     </div>
-
-    <div class="about-card">
-      <h2>Our Vision</h2>
-      <p>
-        To become South Africa’s most innovative tech solutions provider,
-        offering powerful digital tools for both individuals and businesses.
-      </p>
-    </div>
-
-    <div class="about-card">
-      <h2>Our Values</h2>
-      <ul>
-        <li>Innovation</li>
-        <li>Creativity</li>
-        <li>Quality</li>
-        <li>Honesty</li>
-        <li>Customer-first design</li>
-      </ul>
+    <div class="card">
+      <h3>Our Values</h3>
+      <p>Innovation, reliability, transparency, and customer satisfaction guide every project we take on.</p>
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2025 Mellow Tech Services — Digitally Mellow. Technically Sharp.</p>
+  <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Your message..." required></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Mellow Tech Services. All Rights Reserved.</p>
   </footer>
 
   <script src="script.js"></script>

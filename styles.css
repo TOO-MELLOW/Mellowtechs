@@ -1,0 +1,113 @@
+/* THEME COLORS */
+:root {
+    --bg: #0d1b2a;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --accent: #4BCFFA;
+    --text: #ffffff;
+    --blur: blur(12px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1B1464, #4BCFFA);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.logo {
+    width: 70px;
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text);
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 1.8rem;
+    background: var(--accent);
+    color: #000;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-title {
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 2.2rem;
+}
+
+/* SERVICE GRID */
+.services-grid {
+    display: grid;
+    gap: 1.5rem;
+    padding: 0 1.2rem 3rem 1.2rem;
+}
+
+.service-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: var(--blur);
+}
+
+.tag-new {
+    background: var(--accent);
+    color: #000;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.3);
+}

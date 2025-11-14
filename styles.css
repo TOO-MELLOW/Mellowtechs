@@ -1,4 +1,3 @@
-<!-- ========================= styles.css ========================= -->
 :root{
   --bg-1: #04102a; /* deep navy */
   --primary: #1B1464;
@@ -82,3 +81,4 @@ body{margin:0;font-family:Roboto,system-ui,Arial,sans-serif;background:linear-gr
 /* small utilities */
 .link{color:var(--secondary);text-decoration:none}
 .pill{font-size:12px}
+

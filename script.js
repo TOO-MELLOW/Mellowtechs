@@ -1,4 +1,3 @@
-/* Minimal, small JS — save as script.js */
 (function(){
   // set years
   var y = new Date().getFullYear();

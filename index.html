@@ -1,109 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mellow Tech Services — Futuristic Edition</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mellow Tech Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- Quantum Particle Background -->
-<canvas id="quantum-bg"></canvas>
-
-<!-- Navigation Bar -->
-<nav class="neo-nav">
-  <div class="nav-logo">Mellow<span>Tech</span></div>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
-</nav>
-
-<!-- Hero Section -->
-<header class="hero-section">
-  <div class="hero-content">
-    <h1 class="quantum-title">Digitally Mellow<br>Technically Sharp</h1>
-    <p class="hero-sub">Where futuristic innovation meets everyday tech solutions — reshaping the digital world one genius idea at a time.</p>
-
-    <div class="hero-buttons">
-      <a href="services.html" class="btn neon-btn">Explore Services</a>
-      <a href="https://wa.me/+27734666595" target="_blank" class="btn outline-btn">WhatsApp Us</a>
+  <!-- Hero Section -->
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Mellow Tech</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Digitally Mellow. <br> Technically Sharp.</h1>
+      <p>We craft modern websites, revamp CVs, design stunning graphics, and set up your business digitally. Your tech, our expertise.</p>
+      <a href="#contact" class="btn-primary">Get Started</a>
     </div>
-  </div>
-
-  <div class="hero-visual">
-    <div class="floating-orb orb-blue"></div>
-    <div class="floating-orb orb-purple"></div>
-    <div class="floating-orb orb-cyan"></div>
-  </div>
-</header>
-
-<!-- Futuristic Features Section -->
-<section class="features-section">
-  <h2 class="section-title">Why Choose Mellow Tech?</h2>
-  <div class="features-grid">
-    <div class="feature-item holo-card">
-      <i class="fas fa-bolt feature-icon"></i>
-      <h3>Lightning Fast</h3>
-      <p>Experience performance so fast, it feels like your device time‑traveled.</p>
+    <div class="hero-shapes">
+      <div class="shape shape1"></div>
+      <div class="shape shape2"></div>
+      <div class="shape shape3"></div>
     </div>
+  </header>
 
-    <div class="feature-item holo-card">
-      <i class="fas fa-shield-alt feature-icon"></i>
-      <h3>Super Secure</h3>
-      <p>Your data is protected with next‑level shielding — the future of safety.</p>
+  <!-- Services Preview Section -->
+  <section class="services-preview">
+    <h2>Our Services</h2>
+    <div class="services-cards">
+      <div class="card">
+        <h3>Web & Domain Setup</h3>
+        <p>Professional websites and domain registration made simple.</p>
+      </div>
+      <div class="card">
+        <h3>Graphic Design</h3>
+        <p>Logos, banners, branding – visual identity that pops.</p>
+      </div>
+      <div class="card">
+        <h3>CV Revamp</h3>
+        <p>Transform your resume into a modern, recruiter-ready CV.</p>
+      </div>
+      <div class="card">
+        <h3>PC Troubleshooting</h3>
+        <p>Fast and reliable fixes for hardware and software issues.</p>
+      </div>
     </div>
+    <a href="services.html" class="btn-secondary">Explore All Services</a>
+  </section>
 
-    <div class="feature-item holo-card">
-      <i class="fas fa-brain feature-icon"></i>
-      <h3>Smart Solutions</h3>
-      <p>AI‑optimised, human‑friendly, and futuristic — the perfect combo.</p>
+  <!-- About Preview -->
+  <section class="about-preview">
+    <h2>About Mellow Tech Services</h2>
+    <p>We are a local tech hub providing creative, innovative, and reliable solutions. Our goal is to make your digital life smoother and more efficient.</p>
+    <a href="about.html" class="btn-secondary">Learn More</a>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"Mellow Tech didn't just fix my computer—they made it feel alive! Reliable, fast, and professional."</p>
+        <span>— Sarah J.</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"Their design work transformed our brand. Stunning graphics, smooth communication, top-notch service."</p>
+        <span>— Mark T.</span>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Services Preview Section -->
-<section class="services-preview">
-  <h2 class="section-title">Our Top Services</h2>
+  <!-- Contact / CTA -->
+  <section class="contact" id="contact">
+    <h2>Ready to Mellow Your Tech?</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Tell us your tech needs..." required></textarea>
+      <button type="submit" class="btn-primary">Send Request</button>
+    </form>
+  </section>
 
-  <div class="service-cards">
-    <div class="service-card neon-border">
-      <h3>Windows Installation</h3>
-      <p>Clean, secure and optimized installations for peak performance.</p>
-      <a href="services.html#win" class="card-btn">View More</a>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mellow Tech Services. All Rights Reserved.</p>
+  </footer>
 
-    <div class="service-card neon-border">
-      <h3>CV Revamp & Typing</h3>
-      <p>Transform your CV into a professional, job‑winning masterpiece.</p>
-      <a href="services.html#cv" class="card-btn">View More</a>
-    </div>
-
-    <div class="service-card neon-border">
-      <h3>Graphic Design</h3>
-      <p>Premium logos, posters, branding and creative digital art.</p>
-      <a href="services.html#design" class="card-btn">View More</a>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section class="contact-section">
-  <h2 class="section-title">Let's Work Together</h2>
-  <p class="contact-text">Have a project in mind? Need help? We're always ready.</p>
-  <a href="https://wa.me/+27734666595" target="_blank" class="btn neon-btn">Message on WhatsApp</a>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>© 2025 Mellow Tech Services — Digitally Mellow. Technically Sharp.</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

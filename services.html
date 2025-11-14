@@ -1,62 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mellow Tech Services – Our Services</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Mellow Tech Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="animated-bg"></div>
-
-  <header class="header">
+  <nav class="navbar">
     <div class="logo">Mellow Tech</div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="services.html" class="active">Services</a>
-      <a href="about.html">About</a>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>Our Services</h1>
+    <p>Delivering innovative tech solutions tailored to your needs.</p>
   </header>
 
-  <section class="hero small-hero">
-    <h1 class="hero-title">Our Services</h1>
-    <p class="hero-sub">Smart. Creative. Technically Sharp.</p>
-  </section>
-
-  <section class="services-grid">
-    <div class="service-card">
-      <h3>Website Design</h3>
-      <p>Modern responsive websites with animations and clean UI.</p>
+  <section class="services-list">
+    <div class="card">
+      <h3>Web & Domain Setup</h3>
+      <p>Professional websites, domain registration, hosting setup, and maintenance.</p>
     </div>
-
-    <div class="service-card">
-      <h3>Web Development</h3>
-      <p>Powerful systems, full‑stack development, and scalable apps.</p>
+    <div class="card">
+      <h3>Graphic Design</h3>
+      <p>Logos, banners, flyers, and full branding services for businesses.</p>
     </div>
-
-    <div class="service-card">
-      <h3>Branding & Graphics</h3>
-      <p>Logos, flyers, social media packs, and brand identity kits.</p>
+    <div class="card">
+      <h3>CV Revamp</h3>
+      <p>Modernize your CV with AI-assisted formatting and creative layouts.</p>
     </div>
-
-    <div class="service-card">
-      <h3>Mobile Apps</h3>
-      <p>Android & iOS mobile apps that are fast and easy to use.</p>
+    <div class="card">
+      <h3>PC Troubleshooting</h3>
+      <p>Fast, reliable computer repairs and software/hardware troubleshooting.</p>
     </div>
-
-    <div class="service-card">
-      <h3>AI Solutions</h3>
-      <p>Chatbots, automations, AI integrations, and smart workflows.</p>
+    <div class="card">
+      <h3>WhatsApp Automation</h3>
+      <p>Automate messaging for your business and manage orders efficiently.</p>
     </div>
-
-    <div class="service-card">
-      <h3>PWA Development</h3>
-      <p>Installable web apps that feel like native mobile apps.</p>
+    <div class="card">
+      <h3>Tech Consultation</h3>
+      <p>Get professional advice for your digital projects or IT infrastructure.</p>
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2025 Mellow Tech Services — Digitally Mellow. Technically Sharp.</p>
+  <section class="contact" id="contact">
+    <h2>Need a Service?</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Tell us what you need..." required></textarea>
+      <button type="submit" class="btn-primary">Send Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Mellow Tech Services. All Rights Reserved.</p>
   </footer>
 
   <script src="script.js"></script>

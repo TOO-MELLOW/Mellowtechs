@@ -1,71 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mellow Tech Services</title>
-
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mellow Tech Services — Digitally Mellow, Technically Sharp</title>
+  <meta name="description" content="Mellow Tech — device repairs, maintenance, and nano screen coatings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container nav-row">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Mellow Tech Services logo" class="logo" />
+        <div class="brand-text">
+          <span class="visually-hidden">Mellow Tech Services</span>
+        </div>
+      </a>
 
-    <a href="#main" class="skip-link">Skip to content</a>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navList">Menu</button>
+        <ul id="navList" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="cta" href="tel:+27720465993">Call / WhatsApp 072 046 5993</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <header class="header">
-        <div class="logo-container">
-            <img src="assets/logo.png" alt="Mellow Tech Services Logo" class="logo" />
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>We keep your devices mellow and working.</h1>
+          <p class="lead">Repairs, upgrades, cleaning, and protective services — now offering <strong>Nano Screen Coating</strong> to protect your device display.</p>
+
+          <p class="hero-actions">
+            <a class="btn btn-primary" href="services.html#list">See Services</a>
+            <a class="btn btn-outline" href="https://wa.me/27720465993?text=Hi%20Mellow%20Tech,%20I%27d%20like%20to%20book%20a%20service">WhatsApp Us</a>
+          </p>
+
+          <ul class="quick-features" aria-hidden="true">
+            <li>Same-day repairs when possible</li>
+            <li>Genuine/tested parts & warranty</li>
+            <li>Nano Screen Coating — water & scratch resistance</li>
+          </ul>
         </div>
 
-        <nav class="navbar">
-            <button id="navToggle" class="nav-toggle">☰</button>
+        <aside class="hero-panel" aria-label="Quick contact">
+          <img src="assets/logo.png" alt="Mellow Tech logo" class="hero-logo">
+          <h2>Need help now?</h2>
+          <p>Message us on WhatsApp — we'll respond quickly and book a slot.</p>
+          <a class="btn btn-gradient fullwidth" href="https://wa.me/27720465993?text=Hi%20Mellow%20Tech,%20I%27d%20like%20to%20book%20a%20service">WhatsApp 072 046 5993</a>
+        </aside>
+      </div>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+      <div class="decor-icons" aria-hidden="true">
+        <div class="icon">⚙️</div>
+        <div class="icon">🔋</div>
+        <div class="icon">💧</div>
+      </div>
+    </section>
 
-    <!-- HERO SECTION -->
-    <main id="main">
-        <section class="hero">
-            <h1 class="hero-title">Digitally Mellow, Technically Sharp</h1>
-            <p class="hero-subtitle">Tech solutions that empower your world.</p>
+    <section class="how container">
+      <h2 class="section-title">How it works</h2>
+      <ol class="process">
+        <li><strong>Book:</strong> Call or WhatsApp with your device details and issue.</li>
+        <li><strong>Repair:</strong> Drop off or request collection — we diagnose and fix it.</li>
+        <li><strong>Return:</strong> Collect or receive delivery — tested and working.</li>
+      </ol>
+    </section>
 
-            <a href="services.html" class="hero-btn">Explore Our Services</a>
-        </section>
+    <section id="services-preview" class="container services-preview">
+      <h2 class="section-title">Popular Services</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Screen Repair</h3>
+          <p>Quality screen replacements for phones, tablets and laptops.</p>
+          <a class="link" href="services.html#screen">Learn more →</a>
+        </article>
 
-        <!-- HIGHLIGHTS -->
-        <section class="highlights">
-            <h2 class="section-title">Why Choose Mellow Tech?</h2>
+        <article class="card">
+          <h3>Battery Replacement</h3>
+          <p>Fast diagnostics and safe replacements for mobile and laptop batteries.</p>
+          <a class="link" href="services.html#battery">Learn more →</a>
+        </article>
 
-            <div class="highlight-grid">
+        <article class="card">
+          <h3>Nano Screen Coating <span class="pill">New</span></h3>
+          <p>Hydrophobic, scratch-reducing coating professionally applied to displays.</p>
+          <a class="link" href="services.html#nano">Learn more →</a>
+        </article>
 
-                <div class="highlight-card">
-                    <h3>Experienced Technicians</h3>
-                    <p>We provide professional, reliable and modern tech support for all customers.</p>
-                </div>
+        <article class="card">
+          <h3>Data Recovery</h3>
+          <p>Recover lost files from phones, SSDs, HDDs and flash drives.</p>
+          <a class="link" href="services.html#data">Learn more →</a>
+        </article>
+      </div>
+      <p class="center"><a class="btn btn-outline" href="services.html">View all services</a></p>
+    </section>
 
-                <div class="highlight-card">
-                    <h3>Fast Turnaround</h3>
-                    <p>We work efficiently without compromising quality.</p>
-                </div>
+    <section class="testimonials container">
+      <h2 class="section-title">What clients say</h2>
+      <blockquote class="testimonial">“Quick, honest and affordable — my screen fixed in under an hour.” <cite>— Lerato M., Pretoria</cite></blockquote>
+    </section>
+  </main>
 
-                <div class="highlight-card">
-                    <h3>Wide Range of Services</h3>
-                    <p>From device repairs to advanced installations — we do it all.</p>
-                </div>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Mellow Tech logo" class="footer-logo">
+        <p class="muted">Digitally mellow. Technically sharp.</p>
+        <p><strong>Call/WhatsApp:</strong> <a href="tel:+27720465993">072 046 5993</a></p>
+        <p><strong>Website:</strong> <a href="https://www.mellowtech.co.za">mellowtech.co.za</a></p>
+      </div>
 
-            </div>
-        </section>
-    </main>
+      <nav aria-label="Footer links">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="services.html#screen">Screen Repair</a></li>
+          <li><a href="services.html#battery">Battery Replacement</a></li>
+          <li><a href="services.html#nano">Nano Screen Coating</a></li>
+          <li><a href="services.html#data">Data Recovery</a></li>
+          <li><a href="services.html">All services</a></li>
+        </ul>
+      </nav>
 
-    <footer class="footer">
-        <p>© <span id="year"></span> Mellow Tech Services. All rights reserved.</p>
-        <p>Contact: 072 046 5993 • www.mellowtech.co.za</p>
-    </footer>
+      <div class="footer-hours">
+        <h3>Opening Hours</h3>
+        <p>Mon-Fri: 08:00 — 17:00</p>
+        <p>Sat: 09:00 — 13:00</p>
+      </div>
+    </div>
+    <div class="legal">© <span id="year"></span> Mellow Tech Services</div>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

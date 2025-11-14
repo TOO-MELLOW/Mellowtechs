@@ -1,211 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mellow Tech Services — Digitally Mellow, Technically Sharp</title>
-  <meta name="description" content="Mellow Tech — device repairs, maintenance, and nano screen coatings.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mellow Tech Services — Futuristic Edition</title>
+  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Floating Icons Animation */
-        .float-icon {
-            position: absolute;
-            opacity: 0.15;
-            animation: float 6s ease-in-out infinite;
-            pointer-events: none;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        /* A: Animated Gradient Background */
-    body {
-        background: linear-gradient(135deg, #1B1464, #4BCFFA, #FF6B00);
-        background-size: 400% 400%;
-        animation: gradientShift 12s ease infinite;
-    }
-    @keyframes gradientShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
-    /* B: Advanced Floating Icons */
-    .float-icon {
-        position: absolute;
-        opacity: 0.12;
-        animation: float 6s ease-in-out infinite, drift 18s linear infinite;
-        pointer-events: none;
-        z-index: 0;
-    }
-    @keyframes drift {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(60px); }
-    }
-
-    /* C: Interactive Card Animations */
-    .service-card {
-        transition: transform .3s ease, box-shadow .3s ease;
-    }
-    .service-card:hover {
-        transform: translateY(-10px) scale(1.03);
-        box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-    }
-
-    /* D: Page Transitions */
-    .fade-page {
-        opacity: 0;
-        animation: fadeIn .8s forwards;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    /* E: Placeholder for 21 Floating Icons */
-    /* Add icons like: <img src="assets/service-network.png" class="float-icon" style="top:20%; left:15%; width:50px;"> */
-
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Floating Icons -->
-    <img src="assets/icon1.png" class="float-icon" style="top:10%; left:5%; width:60px; animation-delay:0s;">
-    <img src="assets/icon2.png" class="float-icon" style="top:40%; right:10%; width:50px; animation-delay:1s;">
-    <img src="assets/icon3.png" class="float-icon" style="bottom:15%; left:30%; width:70px; animation-delay:2s;">
-    <img src="assets/icon4.png" class="float-icon" style="bottom:25%; right:25%; width:55px; animation-delay:3s;">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" role="banner">
-    <div class="container nav-row">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Mellow Tech Services logo" class="logo" />
-        <div class="brand-text">
-          <span class="visually-hidden">Mellow Tech Services</span>
-        </div>
-      </a>
 
-      <nav class="nav" role="navigation" aria-label="Main navigation">
-        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navList">Menu</button>
-        <ul id="navList" class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a class="cta" href="tel:+27720465993">Call / WhatsApp 072 046 5993</a></li>
-        </ul>
-      </nav>
+<!-- Quantum Particle Background -->
+<canvas id="quantum-bg"></canvas>
+
+<!-- Navigation Bar -->
+<nav class="neo-nav">
+  <div class="nav-logo">Mellow<span>Tech</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-section">
+  <div class="hero-content">
+    <h1 class="quantum-title">Digitally Mellow<br>Technically Sharp</h1>
+    <p class="hero-sub">Where futuristic innovation meets everyday tech solutions — reshaping the digital world one genius idea at a time.</p>
+
+    <div class="hero-buttons">
+      <a href="services.html" class="btn neon-btn">Explore Services</a>
+      <a href="https://wa.me/+27734666595" target="_blank" class="btn outline-btn">WhatsApp Us</a>
     </div>
-  </header>
+  </div>
 
-  <main id="main">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>We keep your devices mellow and working.</h1>
-          <p class="lead">Repairs, upgrades, cleaning, and protective services — now offering <strong>Nano Screen Coating</strong> to protect your device display.</p>
+  <div class="hero-visual">
+    <div class="floating-orb orb-blue"></div>
+    <div class="floating-orb orb-purple"></div>
+    <div class="floating-orb orb-cyan"></div>
+  </div>
+</header>
 
-          <p class="hero-actions">
-            <a class="btn btn-primary" href="services.html#list">See Services</a>
-            <a class="btn btn-outline" href="https://wa.me/27720465993?text=Hi%20Mellow%20Tech,%20I%27d%20like%20to%20book%20a%20service">WhatsApp Us</a>
-          </p>
-
-          <ul class="quick-features" aria-hidden="true">
-            <li>Same-day repairs when possible</li>
-            <li>Genuine/tested parts & warranty</li>
-            <li>Nano Screen Coating — water & scratch resistance</li>
-          </ul>
-        </div>
-
-        <aside class="hero-panel" aria-label="Quick contact">
-          <img src="assets/logo.png" alt="Mellow Tech logo" class="hero-logo">
-          <h2>Need help now?</h2>
-          <p>Message us on WhatsApp — we'll respond quickly and book a slot.</p>
-          <a class="btn btn-gradient fullwidth" href="https://wa.me/27720465993?text=Hi%20Mellow%20Tech,%20I%27d%20like%20to%20book%20a%20service">WhatsApp 072 046 5993</a>
-        </aside>
-      </div>
-
-      <div class="decor-icons" aria-hidden="true">
-        <div class="icon">⚙️</div>
-        <div class="icon">🔋</div>
-        <div class="icon">💧</div>
-      </div>
-    </section>
-
-    <section class="how container">
-      <h2 class="section-title">How it works</h2>
-      <ol class="process">
-        <li><strong>Book:</strong> Call or WhatsApp with your device details and issue.</li>
-        <li><strong>Repair:</strong> Drop off or request collection — we diagnose and fix it.</li>
-        <li><strong>Return:</strong> Collect or receive delivery — tested and working.</li>
-      </ol>
-    </section>
-
-    <section id="services-preview" class="container services-preview">
-      <h2 class="section-title">Popular Services</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Screen Repair</h3>
-          <p>Quality screen replacements for phones, tablets and laptops.</p>
-          <a class="link" href="services.html#screen">Learn more →</a>
-        </article>
-
-        <article class="card">
-          <h3>Battery Replacement</h3>
-          <p>Fast diagnostics and safe replacements for mobile and laptop batteries.</p>
-          <a class="link" href="services.html#battery">Learn more →</a>
-        </article>
-
-        <article class="card">
-          <h3>Nano Screen Coating <span class="pill">New</span></h3>
-          <p>Hydrophobic, scratch-reducing coating professionally applied to displays.</p>
-          <a class="link" href="services.html#nano">Learn more →</a>
-        </article>
-
-        <article class="card">
-          <h3>Data Recovery</h3>
-          <p>Recover lost files from phones, SSDs, HDDs and flash drives.</p>
-          <a class="link" href="services.html#data">Learn more →</a>
-        </article>
-      </div>
-      <p class="center"><a class="btn btn-outline" href="services.html">View all services</a></p>
-    </section>
-
-    <section class="testimonials container">
-      <h2 class="section-title">What clients say</h2>
-      <blockquote class="testimonial">“Quick, honest and affordable — my screen fixed in under an hour.” <cite>— Lerato M., Pretoria</cite></blockquote>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/logo.png" alt="Mellow Tech logo" class="footer-logo">
-        <p class="muted">Digitally mellow. Technically sharp.</p>
-        <p><strong>Call/WhatsApp:</strong> <a href="tel:+27720465993">072 046 5993</a></p>
-        <p><strong>Website:</strong> <a href="https://www.mellowtech.co.za">mellowtech.co.za</a></p>
-      </div>
-
-      <nav aria-label="Footer links">
-        <h3>Services</h3>
-        <ul class="footer-links">
-          <li><a href="services.html#screen">Screen Repair</a></li>
-          <li><a href="services.html#battery">Battery Replacement</a></li>
-          <li><a href="services.html#nano">Nano Screen Coating</a></li>
-          <li><a href="services.html#data">Data Recovery</a></li>
-          <li><a href="services.html">All services</a></li>
-        </ul>
-      </nav>
-
-      <div class="footer-hours">
-        <h3>Opening Hours</h3>
-        <p>Mon-Fri: 08:00 — 17:00</p>
-        <p>Sat: 09:00 — 13:00</p>
-      </div>
+<!-- Futuristic Features Section -->
+<section class="features-section">
+  <h2 class="section-title">Why Choose Mellow Tech?</h2>
+  <div class="features-grid">
+    <div class="feature-item holo-card">
+      <i class="fas fa-bolt feature-icon"></i>
+      <h3>Lightning Fast</h3>
+      <p>Experience performance so fast, it feels like your device time‑traveled.</p>
     </div>
-    <div class="legal">© <span id="year"></span> Mellow Tech Services</div>
-  </footer>
 
-  <script src="script.js"></script>
+    <div class="feature-item holo-card">
+      <i class="fas fa-shield-alt feature-icon"></i>
+      <h3>Super Secure</h3>
+      <p>Your data is protected with next‑level shielding — the future of safety.</p>
+    </div>
+
+    <div class="feature-item holo-card">
+      <i class="fas fa-brain feature-icon"></i>
+      <h3>Smart Solutions</h3>
+      <p>AI‑optimised, human‑friendly, and futuristic — the perfect combo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services Preview Section -->
+<section class="services-preview">
+  <h2 class="section-title">Our Top Services</h2>
+
+  <div class="service-cards">
+    <div class="service-card neon-border">
+      <h3>Windows Installation</h3>
+      <p>Clean, secure and optimized installations for peak performance.</p>
+      <a href="services.html#win" class="card-btn">View More</a>
+    </div>
+
+    <div class="service-card neon-border">
+      <h3>CV Revamp & Typing</h3>
+      <p>Transform your CV into a professional, job‑winning masterpiece.</p>
+      <a href="services.html#cv" class="card-btn">View More</a>
+    </div>
+
+    <div class="service-card neon-border">
+      <h3>Graphic Design</h3>
+      <p>Premium logos, posters, branding and creative digital art.</p>
+      <a href="services.html#design" class="card-btn">View More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <h2 class="section-title">Let's Work Together</h2>
+  <p class="contact-text">Have a project in mind? Need help? We're always ready.</p>
+  <a href="https://wa.me/+27734666595" target="_blank" class="btn neon-btn">Message on WhatsApp</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Mellow Tech Services — Digitally Mellow. Technically Sharp.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

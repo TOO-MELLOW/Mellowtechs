@@ -1,69 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | Mellow Tech Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – Mellow Tech Services</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Mellow Tech</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <header class="page-header">
-    <h1>Our Services</h1>
-    <p>Delivering innovative tech solutions tailored to your needs.</p>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Mellow Tech</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </header>
 
-  <section class="services-list">
-    <div class="card">
-      <h3>Web & Domain Setup</h3>
-      <p>Professional websites, domain registration, hosting setup, and maintenance.</p>
-    </div>
-    <div class="card">
-      <h3>Graphic Design</h3>
-      <p>Logos, banners, flyers, and full branding services for businesses.</p>
-    </div>
-    <div class="card">
-      <h3>CV Revamp</h3>
-      <p>Modernize your CV with AI-assisted formatting and creative layouts.</p>
-    </div>
-    <div class="card">
-      <h3>PC Troubleshooting</h3>
-      <p>Fast, reliable computer repairs and software/hardware troubleshooting.</p>
-    </div>
-    <div class="card">
-      <h3>WhatsApp Automation</h3>
-      <p>Automate messaging for your business and manage orders efficiently.</p>
-    </div>
-    <div class="card">
-      <h3>Tech Consultation</h3>
-      <p>Get professional advice for your digital projects or IT infrastructure.</p>
+  <section class="container fade-in" style="padding:2rem 0;">
+    <h1>Our 11 Services</h1>
+    <div class="services-grid" style="margin-top:1.4rem;">
+      <div class="service-card"><div class="icon">1</div><div><h3>Website Development</h3><p>Fast, modern and responsive websites.</p></div></div>
+      <div class="service-card"><div class="icon">2</div><div><h3>Web App Development</h3><p>Booking systems, dashboard apps, portals, and more.</p></div></div>
+      <div class="service-card"><div class="icon">3</div><div><h3>Mobile App UI/UX</h3><p>Modern UI/UX designs for Android/iOS apps.</p></div></div>
+      <div class="service-card"><div class="icon">4</div><div><h3>Logo & Branding</h3><p>Brand identity design for small and large businesses.</p></div></div>
+      <div class="service-card"><div class="icon">5</div><div><h3>Digital Marketing</h3><p>Grow your presence with targeted online marketing.</p></div></div>
+      <div class="service-card"><div class="icon">6</div><div><h3>WhatsApp Automation</h3><p>Smart automated WhatsApp flows and integrations.</p></div></div>
+      <div class="service-card"><div class="icon">7</div><div><h3>CV Maker Development</h3><p>Custom CV builders, templates, and AI CV tools.</p></div></div>
+      <div class="service-card"><div class="icon">8</div><div><h3>Marketplace Setup</h3><p>Multi-shop e-commerce and delivery marketplaces.</p></div></div>
+      <div class="service-card"><div class="icon">9</div><div><h3>AI Integrations</h3><p>Chatbots, automation, and AI-powered systems.</p></div></div>
+      <div class="service-card"><div class="icon">10</div><div><h3>SEO Optimization</h3><p>Improve ranking and reach more customers.</p></div></div>
+      <div class="service-card"><div class="icon">11</div><div><h3>System Maintenance</h3><p>Monthly updates, security checks, and support.</p></div></div>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Need a Service?</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" rows="4" placeholder="Tell us what you need..." required></textarea>
-      <button type="submit" class="btn-primary">Send Request</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Mellow Tech Services. All Rights Reserved.</p>
+  <footer class="footer">
+    <p>© 2025 Mellow Tech Services</p>
   </footer>
 
+  <a href="https://wa.me/27700000000" class="whatsapp-btn">💬</a>
   <script src="script.js"></script>
 </body>
 </html>

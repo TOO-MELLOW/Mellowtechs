@@ -1,4 +1,8 @@
-
+<div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +19,22 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo-container">
-                <img src="mellowtechs.png"="Mellow Tech Services Logo" class="logo-image">
+                <img src="https://i.imgur.com/YourImageID.png" alt="Mellow Tech Services Logo" class="logo-image">
             </div>
-         
+            
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link cta-link">Get Started</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -521,19 +538,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo-container">
-                        <div class="logo-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40">
-                                <defs>
-                                    <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <path d="M20 5 L35 15 L35 25 L20 35 L5 25 L5 15 Z" fill="url(#footerLogoGradient)" />
-                                <text x="20" y="25" font-size="14" fill="white" text-anchor="middle" font-weight="bold">MT</text>
-                            </svg>
-                        </div>
-                        <span class="logo-text">Mellow<span class="tech-text">Tech</span></span>
+                        <img src="https://i.imgur.com/YourImageID.png" alt="Mellow Tech Services Logo" class="logo-image">
                     </div>
                     <p class="footer-description">Your trusted partner in digital transformation. Delivering premium tech solutions with excellence.</p>
                     <div class="social-links">
@@ -604,6 +609,65 @@
             <path d="M18 15l-6-6-6 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
+
+    <!-- AI Chat Bot -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-button" id="chatButton">
+            <svg class="chat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 10h8M8 14h4" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg class="chat-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M18 6L6 18M6 6l12 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="chat-notification">1</span>
+        </div>
+
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-content">
+                    <div class="bot-avatar">🤖</div>
+                    <div class="bot-info">
+                        <h4>Mellow AI Assistant</h4>
+                        <span class="bot-status"><span class="status-dot"></span>Online</span>
+                    </div>
+                </div>
+                <button class="chat-minimize" id="chatMinimize">−</button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>👋 Hi! I'm your Mellow Tech AI Assistant. How can I help you today?</p>
+                        <div class="quick-replies">
+                            <button class="quick-reply" data-message="Tell me about your services">📋 Our Services</button>
+                            <button class="quick-reply" data-message="What are your prices?">💰 Pricing</button>
+                            <button class="quick-reply" data-message="How can I contact you?">📞 Contact Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+                <button class="chat-send" id="chatSend">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="chat-typing" id="chatTyping">
+                <div class="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span class="typing-text">AI is typing...</span>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

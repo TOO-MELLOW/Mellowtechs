@@ -68,7 +68,7 @@ body {
 }
 
 .nav-container {
-    max-width: 14px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
@@ -88,7 +88,7 @@ body {
 }
 
 .logo-image {
-    height: 190px;
+    height: 199px;
     max-width: 200px;
     width: auto;
     object-fit: contain;

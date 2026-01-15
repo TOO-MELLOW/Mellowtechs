@@ -235,18 +235,67 @@ document.querySelectorAll('.service-card[data-tilt]').forEach(card => {
 });
 
 // Form Validation and Submission
+// WhatsApp Function
+function sendToWhatsApp(name, email, service, message, isUrgent = false) {
+    const phoneNumber = "27720465993"; // Your SA WhatsApp number, digits only
+
+    let serviceIntro = "";
+    switch (service.toLowerCase()) {
+        case "cv writing":
+            serviceIntro = "I need assistance with a professional CV.";
+            break;
+        case "website development":
+            serviceIntro = "I would like a website developed.";
+            break;
+        case "graphic design":
+            serviceIntro = "I am interested in graphic design services.";
+            break;
+        case "windows installation":
+            serviceIntro = "I need help with Windows installation.";
+            break;
+        case "it support":
+            serviceIntro = "I need IT support assistance.";
+            break;
+        default:
+            serviceIntro = "I would like to enquire about your services.";
+    }
+
+    const urgentTag = isUrgent ? "🚨 *URGENT REQUEST*\n\n" : "";
+
+    const whatsappMessage = `
+Hello Mellow Tech Services 👋
+
+${urgentTag}${serviceIntro}
+
+Name: ${name}
+Email: ${email}
+Service: ${service}
+
+Message:
+${message}
+    `.trim();
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp immediately
+    window.open(whatsappURL, "_blank");
+}
+
+// Form Submission
 const contactForm = document.querySelector('.form-card');
 if (contactForm) {
     const submitBtn = contactForm.querySelector('.btn-primary');
-    
+
     submitBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        
+
         const inputs = contactForm.querySelectorAll('.form-input');
         let isValid = true;
-        
+
+        // Simple Validation
         inputs.forEach(input => {
-            if (input.value.trim() === '' && input.tagName !== 'SELECT') {
+            if (input.value.trim() === '') {
                 isValid = false;
                 input.style.borderColor = 'rgba(239, 68, 68, 0.5)';
                 setTimeout(() => {
@@ -254,55 +303,39 @@ if (contactForm) {
                 }, 2000);
             }
         });
-        
+
         if (isValid) {
-    const name = contactForm.querySelector('input[name="name"]').value;
-    const email = contactForm.querySelector('input[name="email"]').value;
-    const service = contactForm.querySelector('select').value;
-    const message = contactForm.querySelector('textarea').value;
+            const name = contactForm.querySelector('input[name="name"]').value;
+            const email = contactForm.querySelector('input[name="email"]').value;
+            const service = contactForm.querySelector('select[name="service"]').value;
+            const message = contactForm.querySelector('textarea[name="message"]').value;
+            const isUrgent = document.getElementById('urgentRequest')?.checked || false;
 
-    sendToWhatsApp(name, email, service, message);
+            // Open WhatsApp
+            sendToWhatsApp(name, email, service, message, isUrgent);
 
-    submitBtn.innerHTML = '<span>Opening WhatsApp…</span>';
-    submitBtn.style.background = 'linear-gradient(135deg, #43e97b, #38f9d7)';
+            // Button Feedback
+            submitBtn.innerHTML = '<span>Opening WhatsApp…</span>';
+            submitBtn.style.background = 'linear-gradient(135deg, #43e97b, #38f9d7)';
 
-    setTimeout(() => {
-        submitBtn.innerHTML = `
-            <span>Send Message</span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11"
-                      stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        `;
-        submitBtn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-        inputs.forEach(input => input.value = '');
-    }, 2000);
-}
-
+            setTimeout(() => {
+                submitBtn.innerHTML = `
+                    <span>Send Message</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11"
+                              stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                `;
+                submitBtn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                // Clear inputs
+                inputs.forEach(input => input.value = '');
+                document.getElementById('urgentRequest').checked = false;
+            }, 2000);
+        }
     });
 }
 
-function sendToWhatsApp(name, email, service, message) {
-    const phoneNumber = "27720465993"; // ← replace with your WhatsApp number (no +)
-
-    const whatsappMessage = `
-Hello Mellow Tech Services 👋
-
-My name is ${name}.
-Email: ${email}
-Service needed: ${service}
-
-Message:
-${message}
-    `.trim();
-
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    window.open(whatsappURL, "_blank");
-}
 
 // Parallax Effect on Hero Section
 window.addEventListener('scroll', () => {

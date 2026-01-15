@@ -284,7 +284,7 @@ if (contactForm) {
 }
 
 function sendToWhatsApp(name, email, service, message) {
-    const phoneNumber = "27XXXXXXXXX"; // ← replace with your WhatsApp number (no +)
+    const phoneNumber = "+27720465993"; // ← replace with your WhatsApp number (no +)
 
     const whatsappMessage = `
 Hello Mellow Tech Services 👋
@@ -299,7 +299,7 @@ ${message}
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/${+27720465993}?text=${encodedMessage}`;
 
     window.open(whatsappURL, "_blank");
 }

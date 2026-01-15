@@ -235,53 +235,42 @@ document.querySelectorAll('.service-card[data-tilt]').forEach(card => {
 });
 
 // Form Validation and Submission
-function sendToWhatsApp(name, email, service, message) {
-    const phoneNumber = "+27720465993"; // ← replace with your WhatsApp  (no +)
-
-    const whatsappMessage = `
-Hello Mellow Tech Services 👋
-
-My name is ${name}.
-Email: ${email}
-Service needed: ${service}
-
-Message:
-${message}
-    `.trim();
-
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-
-    const whatsappURL = `https://wa.me/${+27720465993}?text=${encodedMessage}`;
-
-    window.open(whatsappURL, "_blank");
-}
-
+const contactForm = document.querySelector('.form-card');
+if (contactForm) {
+    const submitBtn = contactForm.querySelector('.btn-primary');
+    
+    submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         
-       if (isValid) {
-    const name = contactForm.querySelector('input[name="name"]').value;
-    const email = contactForm.querySelector('input[name="email"]').value;
-    const service = contactForm.querySelector('select').value;
-    const message = contactForm.querySelector('textarea').value;
-
-    sendToWhatsApp(name, email, service, message);
-
-    submitBtn.innerHTML = '<span>Opening WhatsApp…</span>';
-    submitBtn.style.background = 'linear-gradient(135deg, #43e97b, #38f9d7)';
-
-    setTimeout(() => {
-        submitBtn.innerHTML = `
-            <span>Send Message</span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11"
-                      stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        `;
-        submitBtn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-        inputs.forEach(input => input.value = '');
-    }, 2000);
-}
-
+        const inputs = contactForm.querySelectorAll('.form-input');
+        let isValid = true;
+        
+        inputs.forEach(input => {
+            if (input.value.trim() === '' && input.tagName !== 'SELECT') {
+                isValid = false;
+                input.style.borderColor = 'rgba(239, 68, 68, 0.5)';
+                setTimeout(() => {
+                    input.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                }, 2000);
+            }
+        });
+        
+        if (isValid) {
+            // Show success message
+            submitBtn.innerHTML = '<span>Message Sent! ✓</span>';
+            submitBtn.style.background = 'linear-gradient(135deg, #43e97b, #38f9d7)';
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = `
+                    <span>Send Message</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                `;
+                submitBtn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                inputs.forEach(input => input.value = '');
+            }, 3000);
+        }
     });
 }
 

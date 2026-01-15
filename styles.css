@@ -249,7 +249,7 @@ body {
     color: #667eea;
     font-size: 0.85rem;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 6px;
     animation: fadeInDown 0.8s ease-out;
 }
 
@@ -277,7 +277,7 @@ body {
     font-weight: 800;
     line-height: 1.1;
     color: #ffffff;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
     animation: fadeInDown 1s ease-out 0.2s backwards;
 }
 
